@@ -11,7 +11,7 @@ int main() {
         if(A<B){
             cout<<'<'<<endl;
         } else{
-            cout<<"=="<<endl; #==은 문자열이므로 ""로 묶는다.
+            cout<<"=="<<endl; // ==은 문자열이므로 ""로 묶는다.
         }
     }
     return 0;
