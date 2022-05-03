@@ -51,7 +51,7 @@
       a, b = map(int,sys.stdin.readline().split())
     
   </p>
-  <h4>-\n</h4>  
+  <h4>sys.stdin.readline()</h4>  
   <ol>
     <li>input()은 개행 문자 제거 후 리턴하며, 실행 속도가 늦음</li>
     <li><b>sys.stdin.readline()은 개행 문자 포함 리턴, 실행 속도 빠름</b></li>
