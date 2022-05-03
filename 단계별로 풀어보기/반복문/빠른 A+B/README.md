@@ -19,14 +19,14 @@
     cout.tie(NULL);
   
   </p>
-<h4>- ios_base::sync_with_stdio(false);</h4>   
+<h4>ios_base::sync_with_stdio(false);</h4>   
   <ol>
     <li>c의 stdio와 c++의 iostream 동기화를 false로 변경</li>
     <li>C와 C++ 입출력 모두 버퍼 사용하는데, 위 코드 추가하면 C++가 독립적 버퍼 사용</li>
     <li><b>따라서 C 스타일의 입출력은 사용할 수 없으며, 실행 속도가 빨라지게 됨.</b></li>
   </ol>
   
-<h4>-cin.tie(NULL);</h4>  
+<h4>cin.tie(NULL);</h4>  
   <ol>
     <li>cin과 cout이 묶여있는 것을 풀어주는 역할</li>
     <li>기본적으로 cout은 별도의 명령이 있거나 버퍼가 가득차지 않아도, 
@@ -34,7 +34,7 @@
     <li><b>위 코드를 추가하면, 출력을 위해 별도의 명령으로 버퍼를 비워줘야 함.</b></li>
   </ol>
   
- <h4>-\n</h4>  
+ <h4>\n</h4>  
   <ol>
     <li>endl은 개행 문자 출력과 출력 버퍼를 비우는 역할(딜레이 발생)</li>
     <li><b>"\n"통해 개행 시 실행 속도 빨라짐.</b></li>
