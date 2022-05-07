@@ -39,7 +39,7 @@
     <li>endl은 개행 문자 출력과 출력 버퍼를 비우는 역할(딜레이 발생)</li>
     <li><b>"\n"통해 개행 시 실행 속도 빨라짐.</b></li>
   </ol>
-<h2>c++</h2>
+<h2>Python</h2>
 <h3>● 실행 속도 높이기</h3>
   <p>
     
@@ -57,4 +57,8 @@
     <li><b>sys.stdin.readline()은 개행 문자 포함 리턴, 실행 속도 빠름</b></li>
     <li><b>.rstrip()이나 int(정수로 변환 시, 개행 문자 제거) 사용</b></li>
   </ol>
-    
+  <h4>sys.stdin</h4>  
+  <ol>
+    <li><b>for line in sys.stdin()</b>: 한 줄씩 문자열로 받아옴</li>
+
+  </ol>  
