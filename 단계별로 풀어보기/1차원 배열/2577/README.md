@@ -1,6 +1,7 @@
-<h1>포인터 사용</h1>
+<h1>1차원 배열</h1>
 <h2>C++</h2>
 
+<h3>포인터 사용</h3>
 <p>
   
 	int* analyzeResult(int result) {
@@ -36,4 +37,7 @@
 
 </p>
   
-  
+<h2>Python</h2>
+<h3>lambda 사용</h3>
+
+
