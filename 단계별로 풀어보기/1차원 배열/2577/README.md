@@ -40,4 +40,38 @@
 <h2>Python</h2>
 <h3>lambda 사용</h3>
 
+<h4>기본 사용</h4>
+<p>
+	
+	(lambda 매개변수 : 표현식)(값)
+	
+</p>
+
+<h4>map() 사용</h4>
+
+<p>
+
+	map(lambda 매개변수 : 표현식, 리스트)
+	map(lambda 매개변수 : 표현식, range(n))
+
+</p>
+
+<h4>reduce()</h4>
+
+<p>
+
+	from functools import reduce
+	reduce(lambda 매개변수 : 표현식, 리스트) //reduce(함수, 시퀀스)
+	
+</p>
+
+<p>누적 적용</p>
+
+<h4>filter()</h4>
+
+<p>
+	
+	filter(lambda x: x < 5, range(10)) //filter(함수, 리스트)
+			       
+</p>
 
