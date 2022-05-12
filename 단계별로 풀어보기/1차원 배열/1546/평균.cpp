@@ -44,7 +44,8 @@ double findNewAvg() {
 		total += grade[i];
 
 	total = total / double(N);
-
+	
+	delete grade; // 동적 할당 후 메모리 해제
 	return total;
 }
 
