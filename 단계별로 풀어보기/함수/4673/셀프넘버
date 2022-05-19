@@ -1,0 +1,36 @@
+#include <iostream>
+#include <set>
+using namespace std;
+
+set<int> makeNewNum(set<int> selfNum, int n){
+    for(int i=1; i<n; i++){
+        int j=i;
+        while(j<n){
+            j+=j/10+j%10;
+            if(j<=n){
+                selfNum.insert(j);
+            }
+        }
+    }
+    
+    return selfNum;
+}
+
+int printSelfNum(set<int> selfNum, int n){
+    for(int i=1;i<n;i++){
+        if(selfNum.find(i)==selfNum.end())
+            cout<<i<<'\n';
+    }
+    if(*selfNum.end()!=n)
+        cout<<n;
+    
+    return 0;
+}
+
+int main(){
+    set<int> selfNum;
+    int n= 10000;
+
+    selfNum = makeNewNum(selfNum, n);
+    printSelfNum(selfNum, n);
+}
