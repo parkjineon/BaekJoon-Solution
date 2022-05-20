@@ -4,11 +4,16 @@ using namespace std;
 
 set<int> makeNewNum(set<int> selfNum, int n){
     for(int i=1; i<n; i++){
-        int j=i;
-        while(j<n){
-            j+=j/10+j%10;
-            if(j<=n){
-                selfNum.insert(j);
+        int num=i;
+        while(num<n){
+            int j=num;
+            while(j/10>0){
+                num+=j%10;
+                j=(j-j%10)/10;
+            }
+            num+=j;
+            if(num<=n){
+                selfNum.insert(num);
             }
         }
     }
@@ -17,12 +22,10 @@ set<int> makeNewNum(set<int> selfNum, int n){
 }
 
 int printSelfNum(set<int> selfNum, int n){
-    for(int i=1;i<n;i++){
+    for(int i=1;i<=n;i++){
         if(selfNum.find(i)==selfNum.end())
             cout<<i<<'\n';
     }
-    if(*selfNum.end()!=n)
-        cout<<n;
     
     return 0;
 }
