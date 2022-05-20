@@ -3,15 +3,31 @@ using namespace std;
 
 int findHanSu(int N){
     int cnt=0;
-    bool same = true;
     
-    for(int i=0; i<=N; i++){
-        int differ = (j%100-j%10)/10-(j%10);
+    for(int i=1; i<=N; i++){
         
-        if(differ != (j%1000-j%100)/100-(j%100-j%10)/10)
-            continue;
+        bool same = true;
+        int j = i;
+        
+        while(same){
             
+            if(j/100==0)
+                break;
             
+            int differ = (j%100-j%10)/10-(j%10);
+        
+            if(differ != (j%1000-j%100)/100-(j%100-j%10)/10){
+                same = false;
+                break;
+            }
+                
+            j = j/10;
+            
+        }
+        
+        if(same == true)
+            cnt++;
+        
     }
 
     
@@ -25,5 +41,6 @@ int main(){
     int N;
     cin>>N;
     
+    cout << findHanSu(N);
     return 0;
 }
