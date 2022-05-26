@@ -1,14 +1,12 @@
 def countAlphabet(word):
     
-    cnt = 0
     croatia = ['c=','c-','d-','dz=','lj','nj','s=','z=']
     
-    while((x in croatia) in word):
-        cnt+=1
-        word.replace(x,'')
-    cnt+=len(word)
+    for i in croatia:
+        while(i in word):
+            word=word.replace(i,' ') #그냥 없애버리면 새로운 문자 생겨날 수도 있음
+    return len(word)
     
-    return cnt
 
 def init():
     word = input()
