@@ -1,3 +1,4 @@
+#파이썬에 switch 없음
 import sys
 
 def calculateCount(N):
