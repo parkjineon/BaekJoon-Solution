@@ -1,25 +1,29 @@
-#include <iostream> //시간초과
+#include <iostream> 
+#include <set>
 using namespace std;
-    
-int main(){
+
+int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
+
+    set<int> notPrime;
     int M, N;
     cin >> M >> N;
-    
-    for(int i = M; i <= N; i++){
-        bool prime = true;
-        for(int j = 2; j < i; j++){
-            if(i%j==0){
-                prime = false;
-                break;
+
+    notPrime.insert(1);
+    for (int i = 2; i * i <= N;i++) {//i*i가 N보다 큰 i까지만 하기
+        if (notPrime.find(i) == notPrime.end()) {
+            for (int j = i*i; j <= N; j+=i) { //i*i이후로 보기
+                notPrime.insert(j);
             }
         }
-        
-        if(prime)
-            cout << i <<'\n';
+
     }
-    
+
+    for (int i = M; i <= N; i++) {
+        if (notPrime.find(i) == notPrime.end())
+            cout << i << '\n';
+    }
+
     return 0;
 }
