@@ -22,7 +22,15 @@ int main() {
 	int a = 0;
 	int b = 1;
 
-	fibonacci(a, b, N);
+	if (N == 0) {
+		cout << 0;
+	}
+	else if (N == 1) {
+		cout << 1;
+	}
+	else {
+		fibonacci(a, b, N);
+	}
 
 	return 0;
 }
