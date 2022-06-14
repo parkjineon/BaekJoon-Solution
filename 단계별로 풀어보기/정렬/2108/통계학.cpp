@@ -14,8 +14,8 @@ int main() {
     cin >> num;
     int mean = num;
     int mode;
-    int mode1 = num;
-    int mode2 = num;
+    int mode1 = 0;
+    bool second;
     nums[num+4000]++;
     
     int maximum = num;
@@ -35,11 +35,15 @@ int main() {
     }
     
     for(int i = 0; i <= 8000; i++){
-        if (nums[mode+4000] < nums[i]){
-            mode1 = i-4000;
-            mode = mode1;
-
+        if(nums[i] > mode1){
+            mode = i;
+            mode1 = nums[mode];
+            second = false;
+        } else if(nums[i] == mode1 && !second){
+            second = true;
+            mode = i;
         }
+        
         while (nums[i] != 0){
             nums[i]--;
             m++;
@@ -49,7 +53,7 @@ int main() {
         }
     }
     
-    cout << round((double)mean/(double)N) << '\n' << median << '\n'<< mode << '\n' << maximum - minimum;
+    cout << (int)(round((double)mean/(double)N)) << '\n' << median << '\n'<< mode-4000 << '\n' << maximum - minimum;
     
     return 0;
 }
